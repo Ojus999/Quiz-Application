@@ -1,38 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #CEE6F2; 
+  overflow: auto;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Header {
+  height: 100px;
+  background-color: #962E2A; 
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.admin--login {
+  padding: 2rem; 
+  background-color: #E3867D; 
+  border: 2px solid #962E2A; 
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#admin--welcome {
+  margin-bottom: 2rem;
+  font-size: 1.5rem; 
+}
+
+.admin--username,
+.admin--password {
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 20rem;
+}
+
+#username,
+#password{
+  text-align: center;
+}
+
+#label--username,
+#label--password{
+  text-shadow: 0px 0px 25px black;
+}
+
+::-webkit-input-placeholder{
+  text-align: center;
+}
+
+#login--button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #962E2A; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 8rem; 
+}
+
+#login--button:hover {
+  background-color: #761F1B; 
 }
