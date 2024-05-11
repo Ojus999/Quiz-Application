@@ -1,5 +1,4 @@
 // App.js
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
@@ -14,11 +13,11 @@ function App() {
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
 
-    axios.post("http://localhost:3001/send", { username: user, password: pass, score:0 })
+    axios.post("http://127.0.0.1:3001/send", { username: user, password: pass, score:0 })
       .then(res => {
         const response = res.data?.username || "absent";
-        if (response === "abc") {
-          navigate('/User');
+        if (response !== "absent" && response !== "admin") {          
+          navigate('/Quiz',{ state: {name:response} });
         } else if(response === "admin"){
           navigate("/Admin");
         }
